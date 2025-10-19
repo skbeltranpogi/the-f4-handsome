@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDA Login / Portfolio</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=77257&format=png&color=000000">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="basty.css" />
+      
+</head>
+<body>
+    <div id="bg-image"></div>
+    <div id="bg-overlay"></div>
+
+    <header class="header">
+        <div class="header-left">
+            <div class="avatar">S</div>
+            <div class="logo">SEDA</div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="header-actions">
+                <button class="header-btn theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="header-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+            </div>
+        </nav>
+    </header>
+    <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+    </script>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <div class="main-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-cards-container">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="asd.jpg" alt="SEDA" class="profile-img">
+                    </div>
+                    <h3 class="profile-name">SEDA</h3>
+                    <p class="profile-tagline">Frontend Developer</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="eden.jpg" alt="Eden John Relasyon" class="profile-img">
+                    </div>
+                    <h3 class="profile-name">Eden John</h3>
+                    <p class="profile-tagline">Full Stack Developer</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="dino.jpg" alt="Dino Marzon" class="profile-img">
+                    </div>
+                    <h3 class="profile-name">Dino Marzon</h3>
+                    <p class="profile-tagline">Full Stack Developer</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="jasper.jpg" alt="Jasper Abala" class="profile-img">
+                    </div>
+                    <h3 class="profile-name">Jasper Abala</h3>
+                    <p class="profile-tagline">UI/UX Designer</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Address</strong><br>
+                        Media St., Pob. Argao
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Phone</strong><br>
+                        09693607118
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Email</strong><br>
+                        seda1534@gmail.com
+                    </div>
+                </div>
+                
+                <button class="cv-download">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="hero-section fade-in" id="home">
+                <h1 class="hero-title">Welcome to Our Group Portfolio</h1>
+                <p class="hero-subtitle">Meet Eden, Jasper, and SEDA – passionate developers and designers.</p>
+            </section>
+            <section class="about-section fade-in" id="about">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-text">
+                    <p>
+                        We are a team of three: Eden John Daniel Dino Marson, Jasper Avala, and SEDA. Our group specializes in full stack development, UI/UX design, and frontend engineering. Together, we build modern, responsive, and user-friendly web applications.
+                    </p>
+                </div>
+            </section>
+
+            <div class="login-card fade-in">
+                <h2 class="login-title">Log in</h2>
+                
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" id="password" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Log in</button>
+                </form>
+                
+                <div class="signup-link">
+                    Not registered? <a href="#">Create an account</a>
+                </div>
+            </div>
+
+            <div class="quote-banner fade-in">
+                <p class="quote-text">"Code is like humor. When you have to explain it, it's bad."</p>
+                <p class="quote-author">— Cory House</p>
+            </div>
+
+            <section class="portfolio-section fade-in" id="projects">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4 class="project-title">E-Commerce Platform</h4>
+                        <p class="project-desc">
+                            A full-stack e-commerce solution built with modern technologies, 
+                            featuring user authentication, payment integration, and admin dashboard.
+                        </p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4 class="project-title">Portfolio Website</h4>
+                        <p class="project-desc">
+                            A responsive portfolio website showcasing creative projects with 
+                            smooth animations and modern design principles.
+                        </p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4 class="project-title">Task Management App</h4>
+                        <p class="project-desc">
+                            A collaborative task management application with real-time updates, 
+                            team collaboration features, and intuitive user interface.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Testimonials</h3>
+                <div class="testimonials">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            "SEDA delivered an outstanding website that exceeded our expectations. 
+                            The attention to detail and user experience is remarkable."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JD</div>
+                            <div>
+                                <div class="testimonial-name">John Doe</div>
+                                <div class="testimonial-role">Project Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            "Working with SEDA was a pleasure. Professional, creative, and always 
+                            delivers on time. Highly recommended!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MS</div>
+                            <div>
+                                <div class="testimonial-name">Maria Santos</div>
+                                <div class="testimonial-role">Design Director</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="resume-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </section>
+
+            <footer class="footer" id="contact">
+                <nav class="footer-nav">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                </nav>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+                <p class="footer-copyright">
+                    © 2024 SEDA. All rights reserved.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const count = +counter.innerText;
+                const increment = target / 200;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => animateCounters(), 10);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            });
+            
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Back to top button visibility
+        function handleBackToTop() {
+            const backToTop = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+        }
+
+        // Smooth navigation
+        function setupSmoothNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link, .footer-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                        
+                        // Close mobile sidebar if open
+                        const sidebar = document.getElementById('sidebar');
+                        const overlay = document.querySelector('.sidebar-overlay');
+                        sidebar.classList.remove('active');
+                        overlay.classList.remove('active');
+                        
+                        // Update active nav link
+                        navLinks.forEach(nl => nl.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Initialize animations and functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            animateSkillBars();
+            handleBackToTop();
+            setupSmoothNavigation();
+            
+            // Start counter animation when stats section is visible
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            const statsGrid = document.querySelector('.stats-grid');
+            if (statsGrid) {
+                statsObserver.observe(statsGrid);
+            }
+            
+            // Add stagger animation to cards
+            const cards = document.querySelectorAll('.fade-in');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-bar')?.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            console.log('Searching for:', searchTerm);
+        });
+
+        // Form handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            console.log('Login attempt:', { email, password });
+            alert('Login functionality would be implemented here!');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            const sidebar = document.getElementById('sidebar');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+                document.querySelector('.sidebar-overlay').classList.remove('active');
+            }
+        });
+
+        const bgOverlay = document.getElementById('bg-overlay');
+        // Make spotlight smaller: use 15% of the largest screen dimension
+        const spotlightRadius = Math.max(window.innerWidth, window.innerHeight) * 0.15;
+
+        function updateSpotlight(x, y, r) {
+            bgOverlay.style.background = `
+                radial-gradient(circle ${r}px at ${x}px ${y}px, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%)
+            `;
+        }
+
+        function handleMouseMove(e) {
+            const x = e.clientX;
+            const y = e.clientY;
+            updateSpotlight(x, y, spotlightRadius);
+        }
+
+        function handleResize() {
+            updateSpotlight(window.innerWidth / 2, window.innerHeight / 2, Math.max(window.innerWidth, window.innerHeight) * 0.15);
+        }
+
+        if (window.matchMedia('(pointer:fine)').matches) {
+            document.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('resize', handleResize);
+            updateSpotlight(window.innerWidth / 2, window.innerHeight / 2, spotlightRadius);
+        } else {
+            bgOverlay.style.background = 'rgba(0,0,0,0.6)';
+        }
+    </script>
+</body>
+</html>
